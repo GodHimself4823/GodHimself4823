@@ -1,0 +1,65 @@
+body {
+    background-color: #f5f5f5; /* Light gray background */
+    color: #333; /* Dark text color for readability */
+    font-family: Arial, sans-serif; /* Modern font */
+    margin: 0;
+    overflow: hidden; /* Prevent scrollbars */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #d32f2f; /* Red color for the heading */
+    animation: fadeIn 2s ease-out; /* Animation for fading in */
+}
+
+.button {
+    display: inline-block; /* Center the button horizontally */
+    background-color: #d32f2f; /* Red color */
+    color: #ffffff; /* White text color */
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s linear, background-color 0.3s ease; /* Smooth transitions */
+}
+
+.button:hover {
+    background-color: #c62828; /* Darker red on hover */
+}
+
+.button:active {
+    background-color: #b71c1c; /* Even darker red when clicked */
+}
+
+.button.ripple {
+    animation: rippleEffect 0.5s ease-out; /* Ripple effect */
+}
+
+@keyframes rippleEffect {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2); /* Adjust this value for the ripple size */
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
